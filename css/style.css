@@ -1,0 +1,195 @@
+body {
+		font-family: 'Catamaran', sans-serif;
+		background-color: #FAFAFA;
+		color: #1B435D;
+	}
+	h4 {
+		font-size: ;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	h1.logo {
+		font-size: 55px;
+		font-weight: 600;
+		width: auto;
+		text-align: center;
+		margin: 50px 0;
+	}
+	h1.logo::before{
+		content: '';
+		display: inline-block;
+		vertical-align: bottom;
+		height: 60px;
+		width: 60px;
+		margin-right: 20px;
+		background: url(../img/logo.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	p {
+		font-size: 40px;
+	}
+	button {
+		height: 30px;
+		padding: 0 15px;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		font-family: 'Catamaran', sans-serif;
+		font-weight: 600;
+	}
+	button:hover {
+		cursor: pointer;
+		filter: brightness(120%);
+		transition: 0.4s;
+	}
+	button:active {
+		filter: brightness(90%);
+		transition: 0.2s;
+	}
+	.displayZone {
+		width: 930px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto 50px auto;
+		font-size: 0;
+	}
+	#displayResult {
+		width: 150px;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+	}
+	#displayResult .resultContent {
+		width: 100%;
+		height: 50%;
+		padding-top: 15px;
+		display: none;
+	}
+	.resultContent h2 {
+		font-size: 25px;
+		line-height: 40px;
+		margin-top: 20px;
+		border-radius: 5px;
+		color: #fff;
+		background-color: #78BBE6;
+	}
+	.newRound {
+		margin: 0 auto;
+		display: block;
+		align-self: flex-end;
+		width: 100%;
+		background-color: #FF895D;
+		color: white;
+	}
+	.randomChordName, .userChordName {
+		width: 50%;
+		margin: 0 auto 25px auto;
+		border-radius: 5px;
+		font-size: 32px;
+		line-height: 50px;
+		color: #fff;
+		background-color: #78BBE6;
+	}
+	#randomChord, #userChord {
+		display: inline-block;
+		font-size: 18px;
+		text-align: center;
+		width: 35%;
+		height: 200px;
+		transition: all 0.7s;
+		background-color: #D5EEFF;
+		border-radius: 5px;
+	}
+	#randomChord h3, #userChord h3 {
+		margin: 15px 0 25px 0;
+	}
+	.randomChordDisplay {
+		display: none;
+	}
+	.randomChordDisplay, .userChordDisplay {
+		text-align: center;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.randomChordDisplay p, .userChordDisplay p {
+		display: inline-block;
+		padding: 0 15px 0 15px;
+	}
+	.randomChordDisplay p:first-child, .userChordDisplay p:first-child {
+		margin-left: 0;
+	}
+	.userChordName {
+		display: none;
+	}
+	#controls {
+		height: 60px;
+		width: 930px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+		background: #45484d; /* Old browsers */
+	    background: -webkit-linear-gradient(#45484d 0%, #231f20 100%);
+	    background: -o-linear-gradient(#45484d 0%, #231f20 100%);
+	    background: linear-gradient(#45484d 0%, #231f20 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#231f20',GradientType=0 ); /* IE6-9 */
+
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#keyboard {
+		font-size: 0;
+		position: relative;
+		background: url(../img/keyboardBg.png);
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		height: 285px;
+		width: 900px;
+		padding: 0 15px;
+		-webkit-background-size: cover;
+		background-size: cover;
+		margin: 0 auto;
+	}
+	.pianoKey, .sharpKey {
+		text-align: center;
+		vertical-align: bottom;
+		font-size: 14px;
+	}
+	.pianoKey:hover, .sharpKey:hover {
+		cursor: pointer;
+	}
+	.pianoKey:active {
+		box-shadow: inset 0px 3px 7px rgba(0, 0, 0, 0.7);
+	}
+	.pianoKey {
+		display: inline-block;
+		background: url(../img/whiteKey.png);
+		background-repeat: no-repeat;
+		height: 70px;
+		width: 6.80%;
+		margin: 0 1.55px;
+		background-size: contain;
+		padding-top: 210px;
+		color: rgba(0, 0, 0, 0.7);
+		font-weight: 600;
+	}
+	.sharpKey {
+		background: url(../img/sharpKey.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 55px;
+		width: 3.8%;
+		position: absolute;
+		margin-left: -17px;
+		z-index: 1;
+		color: rgba(255, 255, 255, 0.7);
+		padding-top: 90px;
+		font-size: 12px;
+		font-weight: 400;
+	}

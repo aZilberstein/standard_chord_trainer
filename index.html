@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VueJS Demo by Andy Grishchenko</title>
+	<script src="js/vue.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Catamaran:400,600" rel="stylesheet">
+</head>
+<body>
+<h1 class="logo">The Standard Chord Trainer</h1>
+<div class="application">
+	<div class="displayZone">
+		<div id="randomChord">
+			<h3>Computer</h3>
+			<div class="randomChordName"> {{notes[0]}} {{type}} </div>
+   	 		<div class="randomChordDisplay">
+    				<p v-for="note in notes">{{note}}</p>
+    		</div>
+			<div id="randomChordPlayback"></div>
+		</div>
+	
+		<div id="displayResult">
+			<div class="resultContent">
+				<h3>Result:</h3>
+				<h2>{{comparison}}</h2>
+			</div>
+			<button class="newRound">New round</button>
+		</div>
+
+		<div id="userChord">
+			<h3>User</h3>
+			<div class="userChordName">{{notes[0]}} {{type}}</div>
+				<div class="userChordDisplay">
+					<p v-for="note in notes">{{note}}</p>
+				</div>
+			<div id="userChordPlayback"></div>
+		</div>
+	</div>
+	<div id="controls">	
+		<button v-on:click="clearChord()">Reset your chord</button>
+		<button v-on:click="submitUserChord()">Submit your chord</button>
+	</div>
+	<div id="keyboard">
+		<div v-for="chord in storage" class="pianoKey" v-on:click="editUserChord(chord), playNote(chord)">{{chord}}</div>
+		<div v-for="chord in storage" class="pianoKey" v-on:click="editUserChord(chord), playNote(chord + '_octave')">{{chord}}</div>
+	</div>
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/script.js">
+	</script>
+</body>
+</html>
